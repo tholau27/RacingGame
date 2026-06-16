@@ -1,7 +1,17 @@
 html, body {
-  margin: 0;
-  padding: 0;
+  margin: 0;                 /* Removes extra border space */
+  padding: 0;                /* Removes inside padding space */
+  background-color: #2b2b2b; /* Changes the background behind your canvas */
+  display: flex;             /* Activates modern layout tools */
+  justify-content: center;   /* Centers your canvas horizontally (Left to Right) */
+  align-items: center;       /* Centers your canvas vertically (Top to Bottom) */
+  min-height: 100vh;         /* Forces the page to look at the full screen height */
+  overflow: hidden;          /* Prevents unwanted scrollbars from appearing */
 }
+
 canvas {
-  display: block;
+  max-width: 95vw;           /* Keeps canvas responsive on smaller screens */
+  max-height: 95vh;          /* Prevents canvas from clipping on short screens */
+  object-fit: contain;       /* Protects your game's aspect ratio dimensions */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); /* Adds a subtle depth shadow */
 }
